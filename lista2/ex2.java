@@ -1,10 +1,11 @@
-import java.util.Scanner;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class ex2 {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        float a,b;
+        float a, b;
         Locale.setDefault(Locale.US);
         System.out.printf("Digite o valor de a: ");
         a = sc.nextFloat();
@@ -12,9 +13,14 @@ public class ex2 {
         System.out.printf("Digite o valor de b: ");
         b = sc.nextFloat();
 
-        System.out.printf("soma: %.2f%nSubtração: %.2f%nMulti: %.2f%nDivisao: %.2f%n", a+b, a -b, a*b, a/b);
-        
-        sc.close();
-    }    
+        System.out.printf(
+            "soma: %.2f%nSubtração: %.2f%nMulti: %.2f%nDivisao: %.2f%n",
+            a + b,
+            a - b,
+            a * b,
+            a / b
+        );
 
+        sc.close();
+    }
 }

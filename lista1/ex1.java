@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class ex1 {
+
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         String nome;
@@ -11,5 +12,4 @@ public class ex1 {
         System.out.printf("Olá, %s! Bem-vindo ao java!%n", nome);
         teclado.close();
     }
-    
 }
