@@ -8,7 +8,7 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Data d1 = new Data(31, 02, 2023);
+        Data d1 = new Data(31, 02, 2024);
         Data d2 = new Data(31, 15, 2026);
         Data d3 = new Data(12, 06, 2024);
         testarData(d1);
@@ -30,6 +30,6 @@ public class main {
         } else {
             System.out.println("ano n bissextow");
         }
-        d1.imprimir();
+        d1.imprimir("-");
     }
 }

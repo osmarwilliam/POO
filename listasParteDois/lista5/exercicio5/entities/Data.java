@@ -48,18 +48,36 @@ public class Data {
         return false;
     }
 
-    public void imprimir() {
-        System.out.println(
-            this.getDia() + "/" + this.getMes() + "/" + this.getAno()
-        );
+    public void imprimir(String operador) {
+        if (dataValida()) {
+            if (operador != null) {
+                System.out.println(
+                    this.getDia() +
+                        operador +
+                        this.getMes() +
+                        operador +
+                        this.getAno()
+                );
+            } else {
+                System.out.println(
+                    this.getDia() + "/" + this.getMes() + "/" + this.getAno()
+                );
+            }
+        } else {
+            System.out.println("Data Inválida!!");
+        }
     }
 
     public boolean verificarDia(int mes, int dia) {
         int maxDiaMes = 31;
+
         if (mes == 1) {
             maxDiaMes = 31;
         } else if (mes == 2) {
-            maxDiaMes = 29;
+            maxDiaMes = 28;
+            if (anoBissexto()) {
+                maxDiaMes = 29;
+            }
         } else if (mes == 3) {
             maxDiaMes = 31;
         } else if (mes == 4) {

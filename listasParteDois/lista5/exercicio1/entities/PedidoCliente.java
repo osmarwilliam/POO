@@ -2,6 +2,7 @@ package entities;
 
 import entities.Produto;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PedidoCliente {
 
@@ -25,15 +26,27 @@ public class PedidoCliente {
 
     public void dinheiro(double dinheiro) {
         double valorTotal = calcularTotal();
-        if (valorTotal > dinheiro) {
-            System.out.printf("Valor não cobre o total de :%.2f%n", valorTotal);
-        } else {
-            double troco = dinheiro - valorTotal;
-            System.out.printf(
-                "Pagamento realizado com sucesso, troco de :%.2f%n",
-                troco
-            );
+        Scanner sc = new Scanner(System.in);
+
+        int fluxo = 0;
+        while (fluxo == 0) {
+            if (valorTotal > dinheiro) {
+                System.out.printf(
+                    "Valor não cobre o total de : %.2f%n",
+                    valorTotal
+                );
+                System.out.printf("Digite um novo valor: ");
+                dinheiro = sc.nextFloat();
+            } else {
+                double troco = dinheiro - valorTotal;
+                System.out.printf(
+                    "Pagamento realizado com sucesso, troco de :%.2f%n",
+                    troco
+                );
+                fluxo = 1;
+            }
         }
+        sc.close();
     }
 
     public void cheque() {

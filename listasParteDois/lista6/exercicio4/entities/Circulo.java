@@ -26,4 +26,30 @@ public class Circulo {
             this.raio = (double) raiox;
         }
     }
+
+    // metodos de acesso (getters e setters)
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setRaio(double raio) {
+        this.raio = raio;
+    }
+
+    public double getRaio() {
+        return this.raio;
+    }
+
+    public int getX() {
+        return this.x;
+    }
+
+    public int getY() {
+        return this.y;
+    }
 }

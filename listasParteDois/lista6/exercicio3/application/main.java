@@ -1,17 +1,16 @@
 package application;
 
 import entities.Conversor;
+import java.util.Scanner;
 
 public class main {
 
     public static void main(String[] args) {
-        Conversor s = new Conversor(3600);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.printf("Digite a quantidade de segundos: ");
+        Conversor s = new Conversor(sc.nextInt());
         s.imprimir();
-        s.setSegundos(50000);
-        s.imprimir();
-        s.setSegundos(7200);
-        s.imprimir();
-        s.setSegundos(3500);
-        s.imprimir();
+        sc.close();
     }
 }

@@ -18,8 +18,8 @@ public class ContaCorrente {
 
     public void sacar(double valor) {
         if (valor >= 0) {
-            if (valor <= this.saldoConta) {
-                this.saldoConta = this.saldoConta - valor;
+            if (valor + 1.50 <= this.saldoConta) {
+                this.saldoConta = this.saldoConta - valor - 1.50;
                 System.out.println("Saque realizado com sucesso!");
             } else {
                 System.out.println(
